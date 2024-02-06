@@ -1,18 +1,16 @@
 import Link from 'next/link';
-
+// TODO: add linked in social
 const navigation = {
   main: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Accessibility', href: '#' },
-    { name: 'Partners', href: '#' },
+    { name: 'Attribution', href: '/attribution' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Changelog', href: '/changelog' },
   ],
   social: [
     {
       name: 'GitHub',
-      href: '#',
+      href: 'https://github.com/jfgbecerra',
       icon: (props: React.SVGProps<SVGSVGElement>) => (
         <svg fill='currentColor' viewBox='0 0 24 24' {...props}>
           <path
@@ -25,7 +23,7 @@ const navigation = {
     },
     {
       name: 'Bento',
-      href: '#',
+      href: 'https://bento.me/jfbecerra',
       icon: (props: React.SVGProps<SVGSVGElement>) => (
         <svg
           width='184'
@@ -41,7 +39,7 @@ const navigation = {
     },
     {
       name: 'Buy Me a Coffee',
-      href: '#',
+      href: 'https://www.buymeacoffee.com/jfbecerra',
       icon: (props: React.SVGProps<SVGSVGElement>) => (
         <svg
           width='24'
@@ -49,6 +47,7 @@ const navigation = {
           viewBox='0 0 884 1279'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
+          {...props}
         >
           <path
             d='M791.109 297.518L790.231 297.002L788.201 296.383C789.018 297.072 790.04 297.472 791.109 297.518V297.518Z'
@@ -136,6 +135,8 @@ export default function Footer() {
             <Link
               key={item.name}
               href={item.href}
+              rel='noopener noreferrer'
+              target='_blank'
               className='text-gray-400 hover:text-gray-500'
             >
               <span className='sr-only'>{item.name}</span>
