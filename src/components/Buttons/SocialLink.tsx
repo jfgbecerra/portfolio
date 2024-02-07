@@ -8,7 +8,7 @@ type SocialLinkProps = {
   Icon: React.ComponentType<React.ComponentProps<'svg'>>;
 };
 
-export default function SocialLink({name, href, Icon}: SocialLinkProps) {
+export default function SocialLink({ name, href, Icon }: SocialLinkProps) {
   return (
     <Link
       href={href}
