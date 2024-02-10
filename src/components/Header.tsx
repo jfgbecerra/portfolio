@@ -7,6 +7,7 @@ import CloseSideMenuButton from './Buttons/CloseSideMenuButton';
 import OpenSideMenuButton from './Buttons/OpenSideMenuButton';
 import NavBarLink from './Buttons/NavBarLink';
 import NavSideMenuLink from './Buttons/NavSideMenuLink';
+import { Meteors } from './Meteors';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -18,7 +19,7 @@ export default function PortfolioHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className='bg-white'>
+    <header className='relative overflow-hidden bg-white'>
       <nav
         className='mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8'
         aria-label='Global'
@@ -60,6 +61,7 @@ export default function PortfolioHeader() {
           </div>
         </Dialog.Panel>
       </Dialog>
+      <Meteors number={15} />
     </header>
   );
 }
