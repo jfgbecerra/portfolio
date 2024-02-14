@@ -1,11 +1,11 @@
 import Footer from '@/components/Footer';
 import PortfolioHeader from '@/components/Header';
 
-export default function Home() {
+export default function Changelog() {
   return (
     <div className='flex h-full flex-col'>
       <PortfolioHeader />
-      <div className='flex-grow'></div>
+      <span className='flex-grow'>Changelog</span>
       <Footer />
     </div>
   );
